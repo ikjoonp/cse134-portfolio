@@ -23,6 +23,7 @@
     </header>
 
     <main>
+        <hr>
         <section id = info>
             <h2>01. About Me </h2>
             <p>Hi, my name is Ikjoon Park. I am a third year Computer Science student at the 
@@ -32,12 +33,13 @@
                 this hobby throughout my highschool career. My interest in video games eventually amalgamated
                 into a general interest in technology and computer programming, and I chose to pursue this
                 academically through an university setting.</p>
+         
         <iframe
             title="UCSD" width="300" height="300"
             src="https://www.openstreetmap.org/export/embed.html?bbox=-117.2406327724457%2C32.87793378236318%2C-117.23712980747224%2C32.883484007342375&amp;layer=mapnik">
         </iframe>
         </section>
-        
+        <hr>
         <section id = interests>
             <h2>02. Interests</h2>
             <p>Apart from my passion in computer science/programming and videogames, I am also interested 
@@ -46,6 +48,8 @@
                 out the <code>git</code>-themed keycaps from GMK; many of the keys are replaced with common
                 <code>git</code> commands like <code>tag, push, checkout,</code> and <code>fetch</code>!
             </p>
+
+            <aside>test</aside>
 
             <button onclick = "SomeFunction()"> Show keyboard</button>
             <template>
@@ -59,7 +63,7 @@
                 */
             </script>
         </section>
-
+        <hr>
         <section id = coursework>
             <h2> 03. Coursework</h2>
             <ul>
@@ -76,15 +80,10 @@
                     <li>Programming Languages: Principles and Paradigms</li>
                 </ul>
                 
-            
-        </section>
-
-
-
-        <table>
-            <caption>Programming Languages</caption>
+            <table>
+            <caption><b>Programming Languages</b></caption>
             <tr>
-              <th>Languages</th>
+              <th>Language</th>
               <th>Familiarity</th>
             </tr>
             <tr>
@@ -100,44 +99,42 @@
                 <td>Beginner</td>
             </tr>
           </table>
-        
-          <br><br><br>
-          <label for = "temp-choose">TESTING:</label>
-          <select id = "temp-choose">
-            <option value ="">--Default--</option>
-            <option value = "Cat">Cat</option>
-            <option value = "Dog">Dog</option>
-            <option value = "Horse">Horse</option>
-          </select>
-          <br><br><br>
-
-
-
-
+        </section>
+        <hr>
 
     </main>
     <footer>
-        <form>
+        <hr>
+        <form id = contact>
             <fieldset>
                 <legend> Send a Message!</legend>
-                <label for = "name">Contact Name:</label>
-                <input id = "name" type = "text" placeholder = "name"><br>
-                <label for = "email">Contact Email:</label> 
-                <input id = "email" type = "text" placeholder ="email"><br>
-                <label for = "subject-choice">Subject:</label>
-                <input list = "subject-list" id = "subject-choice" placeholder = "subject">
-                <datalist id = "subject-list">
-                    <option value = "Question"></option>
-                    <option value = "Job Opportunity"></option>
-                    <option value = "Critique"></option>
-                    <option value = "Comment"></option>
-                </datalist>
-                <br><br>
-                <label for = "message">Message</label><br>
-                <textarea id = "message" placeholder = "message"></textarea><br>
-                <button type="submit"><strong>Submit</strong></button>
+                <ol>
+                    <li><label for = "name">Contact Name:</label>
+                        <select id = name>
+                            <option value = "">--Prefix--</option>
+                            <option value = "Mr">Mr.</option>
+                            <option value = "Mrs">Mrs.</option>
+                            <option value = "Ms">Ms.</option>
+                            <option value = "Miss">Miss</option>
+                        </select>
+                        <input id = "name" type = "text" placeholder = "name"><br>
+                    </li>
+                    <li><label for = "email">Contact Email:</label> 
+                        <input id = "email" type = "text" placeholder ="email"><br>
+                    </li>
+                    <li><label for = "subject-choice">Subject:</label>
+                        <input list = "subject-list" id = "subject-choice" placeholder = "subject">
+                        <datalist id = "subject-list">
+                            <option value = "Question"></option>
+                            <option value = "Job Opportunity"></option>
+                            <option value = "Critique"></option>
+                            <option value = "Comment"></option>
+                         </datalist><br><br>
+                        </li>
+                    <label for = "message">Message</label><br>
+                    <textarea id = "message" placeholder = "message"></textarea><br>
+                    <button type="submit"><strong>Submit</strong></button>
             </fieldset>
-        
         </form>
     </footer>
 </body>
