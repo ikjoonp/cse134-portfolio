@@ -17,8 +17,8 @@
             <a href = "#info">About Me</a>
             <a href = "#interests">Interests</a>
             <a href = "#coursework">Coursework</a>
-            <a href = "#experiments">Experiments</a>
             <a href = "#contact">Contact</a>
+            <a href = "experiments.html">Experiments</a>
         </nav>
     </header>
 
@@ -82,6 +82,10 @@
                 
             <table>
             <caption><b>Programming Languages</b></caption>
+            <colgroup>
+                <col name = languages span = "1">
+                <col name = familiarty span = "1"> 
+            </colgroup>
             <tr>
               <th>Language</th>
               <th>Familiarity</th>
@@ -100,8 +104,6 @@
             </tr>
           </table>
         </section>
-        <hr>
-
     </main>
     <footer>
         <hr>
@@ -110,12 +112,27 @@
                 <legend> Send a Message!</legend>
                 <ol>
                     <li><label for = "name">Contact Name:</label>
-                        <select id = name>
-                            <option value = "">--Prefix--</option>
-                            <option value = "Mr">Mr.</option>
-                            <option value = "Mrs">Mrs.</option>
-                            <option value = "Ms">Ms.</option>
-                            <option value = "Miss">Miss</option>
+                        <select id = "name">
+                            <optgroup label = "Common">
+                                <option value = "" disabled selected>--Prefix--</option>
+                                <option value = "Mr">Mr.</option>
+                                <option value = "Mrs">Mrs.</option>
+                                <option value = "Ms">Ms.</option>
+                                <option value = "Miss">Miss</option>
+                            </optgroup>
+                            <optgroup label = "Formal">
+                                <option value = "Sir">Sir</option>
+                                <option value = "Sire">Sire</option>
+                                <option value = "Madam">Madam</option>
+                                <option value = "Maam">Ma'am</option>
+                                <option value = "Lord">Lord</option>
+                                <option value = "Lady">Lady</option>
+                            </optgroup>
+                            <optgroup label = "Academic">
+                                <option value = "Dr">Dr.</option>
+                                <option value = "Prof">Professor</option>
+                                <option value = "Chanc">Chancellor</option>
+                            </optgroup>
                         </select>
                         <input id = "name" type = "text" placeholder = "name"><br>
                     </li>
@@ -136,6 +153,12 @@
                     <button type="submit"><strong>Submit</strong></button>
             </fieldset>
         </form>
+        <figure>
+            <figcaption> Listen to some music while you're here!</figcaption>
+            <audio controls loop preload = none>
+                <source src = subtle.mp3>
+                Audio element not supported!</audio> 
+        </figure>
     </footer>
 </body>
 </html>
