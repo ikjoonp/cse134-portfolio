@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <title>Ikjoon Park's Portfolio</title>
+    <link rel = "icon" href = "favicon.ico?v=1">
     <style>
         _* {border: 1px solid grey;}
         h1 {color:black; text-align: center;}
@@ -15,17 +16,15 @@
         <nav>
             <a href = "#info">About Me</a>
             <a href = "#interests">Interests</a>
-            <a href = "#resume">Resume</a>
-            <a href = "#contact">Contact</a>
+            <a href = "#coursework">Coursework</a>
             <a href = "#experiments">Experiments</a>
+            <a href = "#contact">Contact</a>
         </nav>
-
     </header>
 
     <main>
-        <h2>Main</h2>
         <section id = info>
-            <h3>01. About Me</h3>
+            <h2>01. About Me </h2>
             <p>Hi, my name is Ikjoon Park. I am a third year Computer Science student at the 
                 University of California San Diego. I've had an interest in Computer Science at an 
                 early age due to my father's occupation as then the lead animator at Rockstar Studios, a 
@@ -33,10 +32,14 @@
                 this hobby throughout my highschool career. My interest in video games eventually amalgamated
                 into a general interest in technology and computer programming, and I chose to pursue this
                 academically through an university setting.</p>
+        <iframe
+            title="UCSD" width="300" height="300"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-117.2406327724457%2C32.87793378236318%2C-117.23712980747224%2C32.883484007342375&amp;layer=mapnik">
+        </iframe>
         </section>
         
         <section id = interests>
-            <h3>02. Interests</h3>
+            <h2>02. Interests</h2>
             <p>Apart from my passion in computer science/programming and videogames, I am also interested 
                 in fashion and building keyboards. Although my interest in fashion is largely financially
                 restrained, I have recently completed a 75% keyboard that has become my daily driver. Check
@@ -50,16 +53,36 @@
                 <img src = "keyboard.jpg" alt = "Custom keyboard" width = "600">
             </template>
             <script>
-                /* script that displays the picture of the keyboard when the 
+                /* 
+                script that displays the picture of the keyboard when the 
                 button is pressed, calling SomeFunction().
                 */
             </script>
-
-
-            
         </section>
 
+        <section id = coursework>
+            <h2> 03. Coursework</h2>
+            <p>
+                <ul>
+                    <li>Basic Data Structures and Object Oriented Design</li>
+                    <li>Algorithms and Systems Analysis</li>
+                    <li>Computer Organization and Systems Programming</li>
+                    <li>Advanced Data Structures</li>
+                    <li>Design and Analysis of Algorithms</li>
+                    <li>Software Engineering</li>
+                    <li>Deep Learning for Natural Language Understanding</li>
+                    <li>Introduction to Computer Architecture</li>
+                    <li>AI: Search and Reasoning</li>
+                    <li>Data Science in Practice</li>
+                    <li>Programming Languages: Principles and Paradigms</li>
+                </ul>
+            </p>
+        </section>
+
+
+
         <table>
+            <caption>Programming Languages</caption>
             <tr>
               <th>Languages</th>
               <th>Familiarity</th>
@@ -72,18 +95,49 @@
                 <td>JavaScript</td>
                 <td>Beginner</td>
             </tr>
+            <tr>
+                <td>C++</td>
+                <td>Beginner</td>
+            </tr>
           </table>
         
+          <br><br><br>
+          <label for = "temp-choose">TESTING:</label>
+          <select id = "temp-choose">
+            <option value ="">--Default--</option>
+            <option value = "Cat">Cat</option>
+            <option value = "Dog">Dog</option>
+            <option value = "Horse">Horse</option>
+          </select>
+          <br><br><br>
+
+
+
+
+
     </main>
     <footer>
-        <h2>Footer</h2>
-        <h3 id = contact>Contact Me:</h3>
         <form>
-            <input id = "name" type = "text" placeholder = "name"><br>
-            <input id = "email" type = "text" placeholder ="email"><br>
-            <textarea id = "message" placeholder = "message"></textarea><br>
-            <button type="submit"><strong>Submit</strong></button>
-
+            <fieldset>
+                <legend> Send a Message!</legend>
+                <label for = "name">Contact Name:</label>
+                <input id = "name" type = "text" placeholder = "name"><br>
+                <label for = "email">Contact Email:</label> 
+                <input id = "email" type = "text" placeholder ="email"><br>
+                <label for = "subject">Subject:</label>
+                <input list = "subject" placeholder = "subject">
+                <datalist id = "subject">
+                    <option value = "Question"></option>
+                    <option value = "Job Opportunity"></option>
+                    <option value = "Critique"></option>
+                    <option value = "Comment"></option>
+                </datalist>
+                <br><br>
+                <label for = "message">Message</label><br>
+                <textarea id = "message" placeholder = "message"></textarea><br>
+                <button type="submit"><strong>Submit</strong></button>
+            </fieldset>
+        
         </form>
     </footer>
 </body>
